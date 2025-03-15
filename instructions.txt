@@ -1,0 +1,22 @@
+Steps:
+
+1. Install Apache and PHP:
+
+sudo apt update
+sudo apt install apache2 php libapache2-mod-php -y
+
+
+2. Install MariaDB:
+
+sudo apt install mariadb-server -y
+sudo mysql_secure_installation
+
+
+3. Download and configure OwnCloud:
+
+wget https://download.owncloud.org/community/owncloud-10.9.1.zip
+sudo apt install unzip
+unzip owncloud-10.9.1.zip -d /var/www/html/
+sudo chown -R www-data:www-data /var/www/html/owncloud/
+sudo chmod -R 755 /var/www/html/owncloud/
+
